@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier - Teachable Machine Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Classifier</h1>
+            <p id="status">Awaiting TensorFlow.js load</p>
+        </header>
+
+        <main>
+            <section id="class-section">
+                <h2>Classes</h2>
+                <div class="input-group">
+                    <input type="text" id="className" placeholder="Enter class name">
+                    <button id="addClass">Add Class</button>
+                </div>
+                <div id="classContainers"></div>
+            </section>
+
+            <section id="train-section">
+                <h2>Train</h2>
+                <button id="train">Train Model</button>
+                <div id="training-status"></div>
+            </section>
+
+            <section id="predict-section">
+                <h2>Model</h2>
+                <div class="predict-container">
+                    <div id="predictionPreview"></div>
+                    <input type="file" id="predictionUpload" accept="image/*">
+                    <label for="predictionUpload" class="file-upload-btn">Choose Image</label>
+                    <button id="predict">Predict</button>
+                </div>
+                <div id="prediction-result"></div>
+            </section>
+        </main>
+
+        <footer>
+            <button id="reset">Reset Model</button>
+        </footer>
+    </div>
+
+    <script src="tf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
